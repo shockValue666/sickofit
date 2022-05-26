@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{FC} from 'react';
+import { Person,HairColor } from './comps/Person';
 import './App.css';
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import Homes from './Pages/Homes';
+import About from './Pages/About';
+import Profile from './Pages/Profile';
+import Error from './Pages/Error'
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <a href="/about">about</a>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Homes/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="*" element={<Error/>} />
+        </Routes>
+        <Person name={"michalis"} age={23} email={"mikropsolis"} getName = {(name:string) => {return name;}} hairColor={HairColor.Pink} />
+      </div>
+    </Router>
   );
 }
 
