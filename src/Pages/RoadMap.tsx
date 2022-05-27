@@ -1,11 +1,11 @@
 import React,{FC} from 'react';
 
-const About: FC = () => {
+const RoadMap: FC = () => {
   return (
     <div>
-        About
+        RoadMap
     </div>
   );
 }
 
-export default About;
+export default RoadMap;

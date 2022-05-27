@@ -1,26 +1,27 @@
 import React,{FC} from 'react';
-import { Person,HairColor } from './comps/Person';
+//import { Person,HairColor } from './comps/Person';
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 import Homes from './Pages/Homes';
-import About from './Pages/About';
-import Profile from './Pages/Profile';
+import About from './Pages/RoadMap';
+// import Profile from './Pages/Profile';
 import Error from './Pages/Error'
+import Navbar from './comps/Navbar';
+import Footer from './comps/Footer';
 
 const App: FC = () => {
   return (
-    <Router>
-      <a href="/about">about</a>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Homes/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="*" element={<Error/>} />
-        </Routes>
-        <Person name={"michalis"} age={23} email={"mikropsolis"} getName = {(name:string) => {return name;}} hairColor={HairColor.Pink} />
-      </div>
-    </Router>
+        <Router>
+          <Navbar/>
+            {/* <div className="App"> */}
+                <Routes>
+                <Route path="/" element={<Homes/>} />
+                <Route path="/roadmap" element={<About/>} />
+                <Route path="*" element={<Error/>} />
+                </Routes>
+            {/* </div> */}
+            <Footer/>
+        </Router>
   );
 }
 
