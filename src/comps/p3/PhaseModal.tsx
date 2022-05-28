@@ -4,9 +4,9 @@ import PhaseAccordeon from './PhaseAccordeon';
 
 function PhaseModal3() {
     const [open,setOpen]=useState(false)
-    const changeState = () => {
-      setOpen(true)
-    }
+    // const changeState = () => {
+    //   setOpen(true)
+    // }
   return (
     <div>
         <Button sx={{color:"white",background: "none" ,fontSize:"30px", '&:hover': {background: "black",}}} variant="contained" onClick={()=>{setOpen(true)}}>
