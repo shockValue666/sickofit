@@ -105,7 +105,9 @@ const Navbar = () => {
                         <ListItem disablePadding>
                                 <ListItemButton>
                                         <Link to="/" >
+                                                <p>
                                                 <ListItemText primary="Home" />
+                                                </p>
                                                 {/* <Button variant="contained" size="medium" sx={{fontSize:"18px",margin:3,background:"rgba(66, 245, 236,0.1)"}} color="info">
                                                         home
                                                 </Button> */}

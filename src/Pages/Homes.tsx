@@ -1,9 +1,13 @@
 import React,{FC} from 'react';
+import CardDefinition from '../comps/CardDefinition';
+import MainPage from '../comps/MainPage';
 
 const Homes: FC = () => {
   return (
     <div>
-        homes
+        <MainPage/>
+        <CardDefinition/>
+        {/* <RoadMap/> */}
     </div>
   );
 }

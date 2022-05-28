@@ -8,11 +8,16 @@ import About from './Pages/RoadMap';
 import Error from './Pages/Error'
 import Navbar from './comps/Navbar';
 import Footer from './comps/Footer';
+import Header from './comps/Header';
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 const App: FC = () => {
   return (
         <Router>
+          <CssBaseline/>
           <Navbar/>
+          <Header/>
             {/* <div className="App"> */}
                 <Routes>
                 <Route path="/" element={<Homes/>} />
