@@ -1,4 +1,5 @@
-import { Box,Grid,styled,ThemeProvider,Typography } from '@mui/material'
+import { Box,Grid,ThemeProvider,Typography } from '@mui/material'
+// import { Box,Grid,styled,ThemeProvider,Typography } from '@mui/material'
 import React,{useEffect,useState} from 'react'
 import {theme} from "../styles"
 
@@ -14,7 +15,7 @@ import {theme} from "../styles"
 function PhaseAccordeon() {
 
     // const [w,setW] = useState(window.innerWidth)
-    const [_,setW] = useState(window.innerWidth)
+    const [,setW] = useState(window.innerWidth)
 
     useEffect(()=>{
         const handleResize = () =>{
