@@ -2,18 +2,19 @@ import { Box,Grid,styled,ThemeProvider,Typography } from '@mui/material'
 import React,{useEffect,useState} from 'react'
 import {theme} from "../styles"
 
-const Responsive = styled(Grid)(({theme})=>({
-    [theme.breakpoints.down("xs")]:{
-        color:"green"
-    },
-    [theme.breakpoints.down("sm")]:{
-        color:"green"
-    }
-}))
+// const Responsive = styled(Grid)(({theme})=>({
+//     [theme.breakpoints.down("xs")]:{
+//         color:"green"
+//     },
+//     [theme.breakpoints.down("sm")]:{
+//         color:"green"
+//     }
+// }))
 
 function PhaseAccordeon() {
 
-    const [w,setW] = useState(window.innerWidth)
+    // const [w,setW] = useState(window.innerWidth)
+    const [_,setW] = useState(window.innerWidth)
 
     useEffect(()=>{
         const handleResize = () =>{
